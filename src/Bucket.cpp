@@ -150,7 +150,7 @@ void ToolBucket::apply(booba::Image* image, booba::Image *hidden_layer, const bo
 {        
     switch (event->type)
     {
-        case booba::EventType::MousePressed:
+        case booba::Event::MousePressed:
         {
             ToolBucket::Vector2d position((float)event->Oleg.mpedata.x, (float)event->Oleg.mpedata.y);
             current_color_ = image->getPixel(int(position.x_), int(position.y_));
@@ -159,9 +159,9 @@ void ToolBucket::apply(booba::Image* image, booba::Image *hidden_layer, const bo
 
             break;
         }
-        case booba::EventType::MouseReleased:
-        case booba::EventType::MouseMoved:
-        case booba::EventType::NoEvent:
+        case booba::Event::MouseReleased:
+        case booba::Event::MouseMoved:
+        case booba::Event::NoEvent:
         
         default:
             break;
